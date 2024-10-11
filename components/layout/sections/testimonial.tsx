@@ -116,10 +116,7 @@ export const TestimonialSection = () => {
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage
-                        src="https://avatars.githubusercontent.com/u/75042455?v=4"
-                        alt="radix"
-                      />
+                      <AvatarImage src="" alt="radix" />
                       <AvatarFallback>SV</AvatarFallback>
                     </Avatar>
 
