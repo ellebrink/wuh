@@ -1,9 +1,11 @@
 "use client";
+import TextRotate from "@/components/fancy/text-rotate";
+import Typewriter from "@/components/fancy/typewriter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { motion, LayoutGroup } from "motion/react";
 import { useTheme } from "next-themes";
-import Image from "next/image";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
@@ -15,40 +17,80 @@ export const HeroSection = () => {
         <div className="text-center space-y-8">
           <Badge variant="outline" className="text-sm py-2">
             <span className="mr-2 text-primary">
-              <Badge>Nyhet</Badge>
+              <Badge>Wuh</Badge>
             </span>
-            <span> Wuh växer i Åre! </span>
+            <span> Konsultbolaget som betalar till konsulten </span>
           </Badge>
 
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
-            {/* <h1>
-              Trött på företag som är för
-              <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                corporate
-              </span>
-              ?
-            </h1> */}
-            <TypeAnimation
-              sequence={[
-                "Trött på företag som är för 'corporate'?",
-                2000,
-                "Är högre lön bättre än firmafester?",
-                2000,
-                "Värderar du frihet i arbetslivet?",
-                2000,
-              ]}
-              wrapper="h1"
-              cursor={false}
-              repeat={Infinity}
-              speed={50}
-              deletionSpeed={70}
-              // omitDeletionAnimation={true}
-            />
+          <div className="max-w-screen-md text-left text-4xl md:text-6xl font-bold">
+            <h1>
+              Ett jobb 💼 ska{" "}
+              <Typewriter
+                text={[
+                  "ge dig frihet att arbeta varifrån du vill.",
+                  "lämna dig ifred samma sekund du checkar ut.",
+                  "vara roligt. Och ge dig galet bra lön 💸, framför allt!",
+                  "inte ge dig ångest på söndagar.",
+                  "vara flexibelt.",
+                  "inte tvinga med dig på stela firmafester med din tråkiga chef.",
+                  "vara ett jobb.",
+                  "💸💸💸",
+                ]}
+                speed={40}
+                className="text-primary"
+                waitTime={2000}
+                deleteSpeed={20}
+                cursorChar={"_"}
+              />
+            </h1>
           </div>
 
+          {/* <div className="w-full h-full text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-light overflow-hidden p-12 sm:p-20 md:p-24">
+            <LayoutGroup>
+              <motion.p className="flex whitespace-pre" layout>
+                <motion.span
+                  className="pt-0.5 sm:pt-1 md:pt-2"
+                  layout
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                >
+                  Ett jobb 💼 ska{" "}
+                </motion.span>
+                <TextRotate
+                  texts={[
+                    "ge schysst lön.",
+                    "vara transparent.",
+                    "inte ge ångest.",
+                    "vara flexibelt.",
+                    "vara ett jobb.",
+                    "💸💸💸",
+                  ]}
+                  mainClassName="text-white px-2 sm:px-2 md:px-3 bg-primary overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={3000}
+                  splitBy="lines"
+                />
+              </motion.p>
+            </LayoutGroup>
+          </div> */}
+
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`We're more than just a tool, we're a community of passionate
-            creators. Get access to exclusive resources, tutorials, and support.`}
+            Att arbeta för Wuh är som att driva eget minus allt det tråkiga. Vi
+            ger dig mer lön, mer förmåner, och mer frihet. Du får jobba med
+            schyssta kunder på alldeles egna villkor.
+            <br />
+            <br />
+            Vad är haken? Det finns ingen. Vi tar pengarna som traditionella
+            konsultbolag lägger på kontor och firmafester och istället ger dem
+            till dig.
+            <br />
+            <br />
+            Vi tror innerligt att vårt sätt att arbeta på är framtiden.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">

@@ -63,45 +63,47 @@ export const ContactSection = () => {
         <div>
           <div className="mb-4">
             <h2 className="text-lg text-primary mb-2 tracking-wider">
-              Contact
+              Kontakt
             </h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Släng iväg ett meddelande!
+            </h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            ipsam sint enim exercitationem ex autem corrupti quas tenetur
+            Oavsett om du är intresserad av att jobba på Wuh eller bara vill
+            introducera dig för framtiden, tveka inte att höra av dig.
           </p>
 
           <div className="flex flex-col gap-4">
             <div>
               <div className="flex gap-2 mb-1">
                 <Building2 />
-                <div className="font-bold">Find us</div>
+                <div className="font-bold">Adress</div>
               </div>
 
-              <div>742 Evergreen Terrace, Springfield, IL 62704</div>
+              <div>Vik 712, 837 97 Åre</div>
             </div>
 
             <div>
               <div className="flex gap-2 mb-1">
                 <Phone />
-                <div className="font-bold">Call us</div>
+                <div className="font-bold">Telefon</div>
               </div>
 
-              <div>+1 (619) 123-4567</div>
+              <div>+46 70 385 02 30</div>
             </div>
 
             <div>
               <div className="flex gap-2 mb-1">
                 <Mail />
-                <div className="font-bold">Mail US</div>
+                <div className="font-bold">Mail</div>
               </div>
 
-              <div>leomirandadev@gmail.com</div>
+              <div>kontakt@wuh.se</div>
             </div>
 
-            <div>
+            {/* <div>
               <div className="flex gap-2">
                 <Clock />
                 <div className="font-bold">Visit us</div>
@@ -111,7 +113,7 @@ export const ContactSection = () => {
                 <div>Monday - Friday</div>
                 <div>8AM - 4PM</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -178,14 +180,14 @@ export const ContactSection = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject</FormLabel>
+                        <FormLabel>Roll</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a subject" />
+                              <SelectValue placeholder="Välj din roll" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
@@ -216,11 +218,11 @@ export const ContactSection = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>Meddelande</FormLabel>
                         <FormControl>
                           <Textarea
                             rows={5}
-                            placeholder="Your message..."
+                            placeholder="Ditt meddelande..."
                             className="resize-none"
                             {...field}
                           />
