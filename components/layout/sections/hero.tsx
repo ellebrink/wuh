@@ -13,7 +13,7 @@ export const HeroSection = () => {
   const { theme } = useTheme();
   return (
     <section className="container w-full">
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-16">
+      <div className="grid lg:max-w-screen-xl gap-8 py-20 md:py-16">
         <div className="text-center space-y-8">
           <Badge variant="outline" className="text-sm py-2">
             <span className="mr-2 text-primary">
@@ -22,14 +22,14 @@ export const HeroSection = () => {
             <span> Konsultbolaget som betalar till konsulten </span>
           </Badge>
 
-          <div className="max-w-screen-md text-left text-4xl md:text-6xl font-bold">
+          <div className="max-w-screen-lg h-52 ml-24 mt-10 text-left text-4xl md:text-6xl font-bold">
             <h1>
               Ett jobb 💼 ska{" "}
               <Typewriter
                 text={[
                   "ge dig frihet att arbeta varifrån du vill.",
                   "lämna dig ifred samma sekund du checkar ut.",
-                  "vara roligt. Och ge dig galet bra lön 💸, framför allt!",
+                  "vara roligt. Och ge dig galet bra lön, framför allt!",
                   "inte ge dig ångest på söndagar.",
                   "vara flexibelt.",
                   "inte tvinga med dig på stela firmafester med din tråkiga chef.",
@@ -79,7 +79,7 @@ export const HeroSection = () => {
             </LayoutGroup>
           </div> */}
 
-          <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+          <p className="max-w-screen-lg mx-auto text-lg text-muted-foreground">
             Att arbeta för Wuh är som att driva eget minus allt det tråkiga. Vi
             ger dig mer lön, mer förmåner, och mer frihet. Du får jobba med
             schyssta kunder på alldeles egna villkor.
